@@ -1,0 +1,353 @@
+html{
+    --margine-main: 40px;
+    --inaltime-buton:2.5em;
+    --dim-text:17px;
+    font-size: var(--dim-text);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+main, header, footer{
+    margin-left: var(--margine-main);
+    margin-right: var(--margine-main);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(239, 239, 239, 0.8);
+    --inaltime-meniu:30px;
+}
+
+#top {
+    background-image: url(../imagini/6015492951_89009d6641_b2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+    background-position: bottom;
+    display: block;
+}
+
+h1{
+    font-family: "astronaut_personaluse-webfont.woff2k";
+    text-align: center;
+    font-size: 1.8cm;
+    color: #fde5ed;
+}
+
+h2{
+    text-align: center;
+    color: #fde5ed;
+}
+
+h3{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    color: #1E5128;
+    font-weight: bold;
+}
+
+#h4off{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5cm;
+}
+
+#font404{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #FFFF33;
+    font-size: 1cm;
+}
+
+#para404{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    font-size: 0.5cm;
+    font-weight: bold;
+}
+
+#butonback{
+    background-color: #CCCC00;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 125px;
+    border: solid yellow 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: center;
+    margin-left: 17.4cm;
+}
+
+#butonback:hover{
+    background-color: navy;
+    box-shadow: 3px 3px #FFFF33;
+    transition: 1.5s;
+}
+
+#back404{
+    background: navy;
+    background-image: url("/Resurse/imagini/Erreur4042.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+li{
+    font-family:'Times New Roman', Times, serif;
+}
+
+h5{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: rgb(202, 202, 0);
+}
+
+h6{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: red;
+}
+
+#echipe{
+    display: grid;
+    margin-right: -75px;
+}
+
+#echipe > li:nth-of-type(odd){
+    background-color: lightgrey;
+}
+
+#echipe > li:hover{
+    display: grid;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.logo {
+    color : #fde5ed;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(77, 63, 70, 0.8);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(90, 68, 68);
+}
+
+#container{
+    display: grid;
+    grid-template-areas: "z-detalii z-clasament"
+                         "z-detalii z-clasament";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 20px;
+    grid-gap: 1.5cm;
+  }
+
+
+#detalii{
+    grid-area: z-detalii;
+}
+
+#clasament{
+    grid-area: z-clasament;
+}
+
+#liga{
+    grid-area: z-liga;
+}
+
+#container{
+  counter-reset: nrsectiune 0;
+}
+#container h3::before{
+  counter-increment: nrsectiune;
+  content:counter(nrsectiune) ".";
+  display: inline;
+  border-radius:10px;
+  padding:5px;
+}
+
+@font-face {
+    font-family: 'astronautregular';
+    src: url('../fonturi/astronaut_personaluse-webfont.woff2') format('woff2'),
+         url('../fonturi/astronaut_personaluse-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul.meniu{
+    display: flex;
+  }
+
+  nav{
+      background-color: green;
+      height: 80px;
+      width: 100%;
+  }
+
+  label.logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+  }
+
+  nav ul{
+    float: right;
+    margin-right: 20px;
+    margin: 0 5px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+
+  nav ul li{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+  
+  ul.meniu li{
+    list-style-type: none;
+    border:var(--dim-border-meniu) solid black;
+    height:var(--inaltime-meniu);
+    width: 100px;
+    background-color: green;
+    text-shadow: 0px 0px 5px #205a12;
+    text-align: center;
+    overflow: hidden;
+    transition: background-color 2s linear, text-shadow 1.5s linear;
+  }
+  
+  ul.meniu>li:hover{
+    overflow: visible;
+  }
+  
+  ul.meniu li:hover{
+    background-color: green;
+    color: white;
+    box-shadow: 0px 0px 5px #205a12 inset;
+  }
+  
+  ul.meniu ul{
+    position: relative;
+    right:var(--dim-border-meniu);
+  }
+  
+  ul.meniu a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  ul.meniu li a{
+    text-decoration: none;
+    color: #fde5ed;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  ul.meniu{
+      margin-top: 27px;
+  }
+
+  ul.submeniu{
+      margin-top: -3px;
+      margin-right: 1.5px;
+  }
+
+
+  #chk-meniu, #imagine_meniu{
+    display: none;
+  }
+
+  @media screen and (max-width: 700px){
+    ul.meniu{
+      display: none;
+      position: relative;
+      animation: animatie_meniu 0.7s linear 1;
+    }
+  
+    ul.meniu li{
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    #chk-meniu:checked~ul.meniu{
+      display: block;
+    }
+  
+    ul.meniu ul{
+      position: absolute;
+      left: 0px;
+      z-index: 100;
+      width: 100%;
+    }
+  
+    #imagine_meniu{
+      height: var(--inaltime-meniu);
+      width: auto;
+      display: inline-block;
+    }
+
+    #container{
+        grid-template-areas: "z-detalii"
+        "z-clasament";
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes animatie_meniu {
+        0%{
+          transform: scaleX(0);
+          opacity: 0;
+          background-color: transparent;
+        }
+        50%{
+          opacity: 0.1;
+        }
+        75%{
+          opacity: 0.3;
+        }
+        100%{
+          transform: scaleX(1);
+          opacity: 1;
+        }
+      }
+
+input{
+    box-shadow: 3px 3px #205a12;
+}

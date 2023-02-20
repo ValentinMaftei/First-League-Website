@@ -1,0 +1,26 @@
+<div id="top">
+    <header id="Inceputul_paginii">
+        <h1>LIGA 1 ROMANIA</h1>
+        <h2>Sezonul 2021-2022</h2>
+        <img src="./Resurse/imagini/casa-liga-1.png" id="mingipuse" alt="Casaliga1" style="width: 75px;height: 100px;">
+        <nav>
+            <label for="chk-meniu"><img id="imagine_meniu" src="./Resurse/imagini/open-menu.png" alt="meniu"></label>
+            <input type="checkbox" id="chk-meniu">
+            <label class="logo">MENIU</label>
+            <ul class="meniu">
+                <li><b><a class="active" href="/index">Acasa</a></b></li>
+                <li><b><a class="active">Meciuri</a></b>
+                    <ul class="submeniu">
+                        <li><a href="/index#play-off">Play-off</a></li>
+                        <li><a href="/index#play-out">Play-out</a></li>
+                    </ul>
+                </li>
+                <li><a href="/inregistrare"><b>SignIn</b></a></li>
+                <% if(locals.utilizator) { %>
+                    <li><div>Logat <%- locals.utilizator.username %></div></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+</div>
